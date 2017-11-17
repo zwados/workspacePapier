@@ -34,7 +34,7 @@ function setGameElements() {
         resultsElem.style.display = 'block';
       break;
     case 'ended':
-        newGameBtn.innerText = 'Jeszcze raz';
+        newGameBtn.innerText = 'Try once again';
     case 'notStarted':
     default:
         newGameElem.style.display = 'block';
@@ -107,6 +107,9 @@ function checkRoundWinner(playerPick, computerPick) {
         computer.score++;
     }
 
+    setGamePoints();
+    gameWinner();
+
 };
 
 function playerPick(playerPick) {
@@ -123,15 +126,17 @@ function setGamePoints() {
 	    playerPointsElem.innerHTML = player.score;
 	    computerPointsElem.innerHTML = computer.score;
 };
-console.log(player.score)
+console.log(player.score);
 
-function setGameWinner(playerResultElem, computerResultElem) {
-	if (playerResultElem == 10) {
-		window.alert('player wins!');
+
+function gameWinner() {
+	if (player.score == 10) {
+		alert(player.name + ' wins!');
+        gameState = 'ended';
 	}
-	else if (computerResultElem == 10) {
-		window.alert('computer wins!');
+	else if (computer.score == 10) {
+		alert('computer wins!');
+        gameState = 'ended'
 	}
+    setGameElements();
 };
-
-setGameWinner();

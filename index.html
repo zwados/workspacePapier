@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Kamien Papier</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
-	<link rel="stylesheet" type="text/css" href="css/style.css"
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <script src="https://use.fontawesome.com/3d38808c8a.js"></script>
 </head>
 <body>
 	<!--game title -->
@@ -35,7 +35,7 @@
       			Rock
     		</button>
     		<button id="js-playerPick_paper"  class="btn">
-     			<span class="badge">
+     			<span class="badge">  
       				<i class="fa fa-hand-paper-o" aria-hidden="true"></i>
       			</span>
       			Paper
@@ -52,7 +52,7 @@
 	<div id="js-resultsTableElement" class="container">
   		<div class="row">
     		<div class="col-xs-5 text-center">
-      			<span id="js-playerPoints" class="badge">
+      			<span id="js-playerPoints" class="badge" onclick="setGamePoints()">
       				0
       			</span>
       			<span id="js-playerName">
